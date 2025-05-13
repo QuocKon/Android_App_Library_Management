@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sửa thông tin nhà xuất bản"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#EF2D2D"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxCornerRadiusBottomEnd="16dp"
+            app:boxStrokeColor="#FF0000"
+            app:boxStrokeWidth="3dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtsuatennhaxb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#711E04"
+                android:textSize="15dp"
+                android:hint="Nhập tên nhà xuất bản " />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusTopStart="16dp"
+            android:layout_marginTop="10dp"
+            app:boxCornerRadiusBottomEnd="16dp"
+            app:boxStrokeColor="#FF0000"
+            app:boxStrokeWidth="3dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtsuadiachinxb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#711E04"
+                android:textSize="15dp"
+                android:hint="Nhập địa chỉ nhà xuất bản " />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxCornerRadiusBottomEnd="16dp"
+            android:layout_marginTop="10dp"
+            app:boxStrokeColor="#FF0000"
+            app:boxStrokeWidth="3dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtsuaquocgianxb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#711E04"
+                android:textSize="15dp"
+                android:hint="Nhập quốc gia" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnThoatsuanhaxb"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/white"
+                android:text="Thoát"
+                android:textColor="#00B0FF"
+                android:textSize="12dp"
+                app:strokeColor="#00B0FF"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnsuanhaxb"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="Sửa thông tin"
+                android:textSize="18dp"
+                android:textColor="#FFFFFF"
+                app:strokeWidth="2dp"
+                android:textStyle="bold"
+                app:strokeColor="#00B0FF"
+                android:backgroundTint="#C8D11818"
+                android:layout_marginEnd="10dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

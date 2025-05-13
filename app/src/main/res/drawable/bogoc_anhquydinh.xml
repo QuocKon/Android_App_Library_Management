@@ -1,0 +1,8 @@
+<!-- rounded_corner.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    >
+
+    <corners android:radius="70dp" /> <!-- Điều chỉnh bán kính của góc -->
+    <solid android:color="@android:color/white" /> <!-- Màu nền của ImageView -->
+</shape>

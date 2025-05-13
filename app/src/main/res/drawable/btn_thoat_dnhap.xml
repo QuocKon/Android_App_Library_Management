@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="50dp"/>
+    <stroke android:color="#E10707" android:width="3dp"/> <!-- Màu đường viền là màu đỏ và độ dày là 2dp -->
+    <solid android:color="@android:color/transparent"/> <!-- Đặt màu nền là trong suốt -->
+
+</shape>

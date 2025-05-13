@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/decor2"
+    tools:context=".fragment.ThongKeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tống số sách thư viện"
+                android:textColor="#000"
+                android:textSize="15dp"
+             />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/bookicon" />
+
+                <TextView
+                    android:id="@+id/tongSoSach"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text=" 150"
+                    android:textColor="#050505"
+                    android:textSize="34dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/rounded_corner_background"
+                     >
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="6dp"
+                        android:paddingStart="20dp"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:text="Số sách đang mượn" />
+                    <TextView
+                        android:id="@+id/txtSoLuongSachMuon"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:paddingStart="15dp"
+                        android:textColor="#11D400"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_height="match_parent"
+                        android:text="120" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_corner_background"
+                    >
+                    <TextView
+                        android:id="@+id/txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="6dp"
+                        android:paddingStart="20dp"
+                        android:layout_weight="1"
+                        android:textColor="#000"
+                        android:text="Số sách mượn quá hạn" />
+                    <TextView
+                        android:id="@+id/txtSoSachQuaHan"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="#D40019"
+                        android:layout_height="match_parent"
+                        android:text="0" />
+                </TableRow>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="280dp"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thống kê sách theo khoảng thời gian"
+                android:textColor="#000"
+                android:layout_marginBottom="15dp"
+                android:textSize="15dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtMha"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="14dp"
+                    android:textColor="#F30202"
+                    android:text="Ngày bắt đầu" />
+
+                <TextView
+                    android:id="@+id/txtNKT"
+                    android:layout_weight="1"
+                    android:textColor="#04C34A"
+                    android:textSize="14dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:textAlignment="center"
+                    android:text="Ngày kết thúc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtNgayBatDau"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textSize="17dp"
+                    android:textColor="#F30202"
+                    android:text="chọn ngày bắt đầu" />
+
+                <TextView
+                    android:id="@+id/txtNgayKetThuc"
+                    android:layout_weight="1"
+                    android:textColor="#04C34A"
+                    android:textSize="17dp"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:text="chọn ngày kết thúc" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnThongKe"
+                    android:layout_width="100dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="match_parent"
+                    android:text="Thống kê"
+                    android:textSize="12dp"
+                    android:layout_gravity="right"
+                    android:textColor="#00B0FF"
+                    app:strokeWidth="2dp"
+                    android:textStyle="bold"
+                    app:strokeColor="#00B0FF"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginEnd="10dp"
+                    />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/rounded_corner_background"
+                    >
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="6dp"
+                        android:paddingStart="20dp"
+                        android:layout_weight="1"
+                        android:textColor="#000000"
+                        android:text="Số sách được mượn" />
+                    <TextView
+                        android:id="@+id/txtSoLuongTheoThang"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:paddingStart="15dp"
+                        android:textColor="#1837E4"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_height="match_parent"
+                        android:text="120" />
+                </TableRow>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Xem thông tin chi tiết"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:background="@color/white"
+                />
+        </Toolbar>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragment.ThemSachFragment$Quan_Xem_chi_tiet_sachFragment">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/img"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btnquaylai"
+                        android:layout_width="0dp"
+                        android:layout_height="61dp"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/backic" />
+
+                    <Button
+                        android:id="@+id/btnmuonsach"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="3"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="70dp"
+                        android:background="@drawable/btn_huy_muon_sach"
+                        android:text="Mượn sách"
+                        app:backgroundTint="@null" />
+                </LinearLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="10dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_margin="10dp"
+                        android:padding="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtchitiettensach"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:textColor="#ff00"
+                            android:gravity="center"
+                            android:text="Tên sách"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imgxemchitiet"
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/logo" />
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TableRow
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/txt1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tác giả"
+                                    android:textColor="#ff00"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp" />
+                                <TextView
+                                    android:id="@+id/txtchitiettacgia"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tác giả"
+                                    android:textSize="20sp" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/txt2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Thể loại"
+                                    android:textColor="#ff00"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp" />
+                                <TextView
+                                    android:id="@+id/txtchitiettheloai"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Thể loại"
+                                    android:textSize="20sp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/txt3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tóm tắt"
+                                    android:textColor="#ff00"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp" />
+                                <TextView
+                                    android:id="@+id/txtchitiettomtat"
+                                    android:layout_width="210dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tóm tắt"
+                                    android:textStyle="italic"
+                                    android:textSize="16sp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+                                <TextView
+                                    android:id="@+id/txt4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ngày xuất bản"
+                                    android:textColor="#ff00"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp" />
+                                <TextView
+                                    android:id="@+id/txtchitietngayxb"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ngày xuất bản"
+                                    android:gravity="center"
+                                    android:textSize="20sp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+                                <TextView
+                                    android:id="@+id/txt5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nhà xuất bản"
+                                    android:textColor="#ff00"
+                                    android:textStyle="bold"
+                                    android:textSize="20sp" />
+                                <TextView
+                                    android:id="@+id/txtchitietnhaxb"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nhà xuất bản"
+                                    android:gravity="center"
+                                    android:textSize="20sp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+                                <TextView
+                                    android:id="@+id/txt6"
+                                    android:layout_width="30dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:textStyle="bold"
+                                    android:textColor="#ff00"
+                                    android:text="Số lượng trong kho"
+                                    android:textSize="20sp" />
+                                <TextView
+                                    android:id="@+id/txtchitietslkho"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    android:textColor="#FB8C00"
+                                    android:text="Số lượng trong kho"
+                                    android:textSize="20sp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/txt7"
+                                    android:layout_width="30dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:textStyle="bold"
+                                    android:textColor="#ff00"
+                                    android:text="Số sách đang được mượn"
+                                    android:textSize="20sp" />
+                                <TextView
+                                    android:id="@+id/txtchitietslmuon"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Số sách đang được mượn"
+                                    android:textColor="#FB8C00"
+                                    android:gravity="center"
+                                    android:textSize="20sp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+                                <TextView
+                                    android:id="@+id/txt8"
+                                    android:layout_width="30dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Số sách còn lại"
+                                    android:textStyle="bold"
+                                    android:textColor="#ff00"
+                                    android:textSize="20sp" />
+                                <TextView
+                                    android:id="@+id/txtchitietsoluoncon"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Số sách còn lại"
+                                    android:textStyle="bold"
+                                    android:textColor="#8E24AA"
+                                    android:gravity="center"
+                                    android:textSize="20sp" />
+                            </TableRow>
+                        </TableLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btnsuasach"
+                        android:layout_width="32dp"
+                        android:layout_height="83dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/btntrasach"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_edit_24" />
+
+                    <ImageButton
+                        android:id="@+id/btnxoasach"
+                        android:layout_width="40dp"
+                        android:layout_height="83dp"
+                        android:background="@drawable/btn_muon_sach"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_delete_24" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </ScrollView>
+</LinearLayout>

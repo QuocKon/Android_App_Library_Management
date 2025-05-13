@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.DoiThongTinCaNhanFragment"
+    >
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/logo"
+        />
+
+    <TextView
+        android:id="@+id/tvTenQuanLy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="28dp"
+        android:textStyle="normal"
+        android:textColor="#D80B0B"
+        android:text="TextView" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="#707070" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="#707070" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:paddingTop="20dp"
+            >
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="151dp"
+                android:layout_height="43dp"
+                android:drawableStart="@drawable/baseline_code_24"
+                android:gravity="center_vertical"
+                android:text="Mã Quản Lý: "
+                android:textSize="15dp"
+                android:drawablePadding="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvMaQuanLy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textColor="#0771C5"
+                android:text="TextView" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+
+            >
+
+            <TextView
+                android:id="@+id/tvtendangnhap"
+                android:layout_width="151dp"
+                android:layout_height="43dp"
+                android:drawableStart="@drawable/baseline_person_24"
+                android:gravity="center_vertical"
+                android:text="Tên Đăng Nhập: "
+                android:textSize="15dp"
+                android:drawablePadding="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTenDangNhap"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textColor="#0771C5"
+                android:text="TextView" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="151dp"
+                android:layout_height="43dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:drawablePadding="15dp"
+                android:drawableStart="@drawable/baseline_date_range_24"
+                android:text="Ngày Sinh: "
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNgaySinh"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textColor="#0771C5"
+                android:text="TextView" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="151dp"
+                android:layout_height="43dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:drawablePadding="15dp"
+                android:drawableStart="@drawable/baseline_male_24"
+                android:text="Giới Tính: "
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvGioiTinh"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textColor="#0771C5"
+                android:text="TextView" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="151dp"
+                android:layout_height="43dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:drawablePadding="15dp"
+                android:drawableStart="@drawable/baseline_location_on_24"
+                android:text="Địa Chỉ: "
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDiaChi"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textColor="#0771C5"
+                android:text="TextView" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="151dp"
+                android:layout_height="43dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:drawablePadding="15dp"
+                android:drawableStart="@drawable/baseline_phone_24"
+                android:text="Số điện thoại: "
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSoDienThoai"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textColor="#0771C5"
+                android:text="TextView" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:drawablePadding="15dp"
+                android:drawableStart="@drawable/baseline_alternate_email_24"
+                android:text="Email: "
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:textColor="#0771C5"
+                android:text="TextView" />
+        </TableRow>
+
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnSuaThongTinCaNhan"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/background_btn"
+        android:textColor="@color/white"
+        app:backgroundTint="@null"
+        android:text="SỬA THÔNG TIN" />
+</LinearLayout>

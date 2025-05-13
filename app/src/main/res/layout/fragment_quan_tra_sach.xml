@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/img"
+    tools:context=".fragment.TraSachFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:text="Nhập mã mượn sách"/>
+        <TextView
+            android:background="@color/white"
+            android:id="@+id/txtthongtinmuon"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="Bạn đang mượn 5 quyển sách Cấu trúc dữ liệu và giải thuật"/>
+
+        <EditText
+            android:id="@+id/edtnhapmatrasach"
+            android:layout_width="330dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/txt_timkiem_sach"
+            android:gravity="center"
+            android:inputType="number"
+            android:hint="Nhập mã mượn sách"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <EditText
+            android:id="@+id/edtnhapsltrasach"
+            android:layout_width="330dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/txt_timkiem_sach"
+            android:gravity="center"
+            android:inputType="number"
+            android:hint="Nhập số lượng muốn trả"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="287dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="19sp"
+            android:background="@drawable/btn_huy_muon_sach"
+            android:layout_marginTop="20dp"
+            android:text="Lưu ý: Trả sách thành công bạn sẽ được nhận mã mượn sách. Bạn vui lòng nhập thông tin mã đấy để hoàn tất trả sách" />
+
+        <Button
+            android:id="@+id/btnxacnhantrasach"
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btntrasach"
+            android:text="Xác nhận trả"
+            android:textSize="18sp"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+</FrameLayout>

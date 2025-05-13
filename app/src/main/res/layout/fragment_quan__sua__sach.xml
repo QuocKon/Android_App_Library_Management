@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sửa thông tin sách"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@color/white"/>
+        </Toolbar>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/img"
+            tools:context=".fragment.SuaSachFragment">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageButton
+                    android:id="@+id/btnquaylaisua"
+                    android:layout_width="95dp"
+                    android:layout_height="60dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/backic"
+                    android:text="Button"
+                    app:backgroundTint="@null" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:background="@drawable/dialog_sua_sach"
+                    android:layout_height="wrap_content">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="Mã sách"
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/edtmasachsua"
+                                android:layout_width="243dp"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imganhsua"
+                            android:layout_width="150dp"
+                            android:layout_height="180dp"
+                            android:src="@drawable/logo" />
+
+                        <LinearLayout
+                            android:layout_width="204dp"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageButton
+                                android:id="@+id/btncamsua"
+                                android:layout_width="82dp"
+                                android:layout_height="52dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/btn_huy_muon_sach"
+                                android:src="@drawable/ic_photo_camera_24" />
+
+                            <ImageButton
+                                android:id="@+id/btnfoldersua"
+                                android:layout_width="82dp"
+                                android:layout_height="52dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/btn_huy_muon_sach"
+                                android:src="@drawable/ic_folder_24" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TableRow
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/textView21"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:text="Tên sách" />
+
+                            <EditText
+                                android:id="@+id/edttensachsua"
+                                android:layout_width="308dp"
+                                android:layout_height="80dp"
+                                android:background="@drawable/txt_them_sach"
+                                android:gravity="start|top"
+                                android:singleLine="false"
+                                android:inputType="textMultiLine"
+                                android:maxLines="5"
+                                android:padding="5dp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/textView22"
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:text="Thể loại" />
+
+                            <Spinner
+                                android:id="@+id/spintheloaisua"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/txt_them_sach"
+                                android:ems="10"
+                                android:inputType="text"
+                                android:padding="5dp"
+                                android:text="Name" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/textView23"
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:text="Tác giả" />
+
+                            <Spinner
+                                android:id="@+id/spintacgiasua"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/txt_them_sach"
+                                android:ems="10"
+                                android:inputType="text"
+                                android:padding="5dp"
+                                android:text="Name" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/textView24"
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:text="Tóm tắt" />
+
+                            <EditText
+                                android:id="@+id/edttomtatsua"
+                                android:layout_width="wrap_content"
+                                android:layout_height="200dp"
+                                android:ems="10"
+                                android:padding="10dp"
+                                android:background="@drawable/txt_them_sach"
+                                android:gravity="start|top"
+                                android:inputType="textMultiLine" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/textView25"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:text="Ngày xuất bản " />
+
+                            <EditText
+                                android:id="@+id/edtngayxbsua"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:background="@drawable/txt_them_sach"
+                                android:inputType="date"
+                                android:padding="5dp"
+                                tools:ignore="TouchTargetSizeCheck"
+                                />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="20dp"
+                                android:layout_height="match_parent"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:text="Nhà xuất bản" />
+
+                            <Spinner
+                                android:id="@+id/spinnhaxbsua"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:background="@drawable/txt_them_sach"
+                                android:inputType="text"
+                                android:padding="5dp"
+                                android:text="Name" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/textView27"
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:text="Số lượng" />
+
+                            <EditText
+                                android:id="@+id/edtslsua"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:background="@drawable/txt_them_sach"
+                                android:inputType="number"
+                                android:padding="5dp"
+                                android:text="" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnsuasuasach"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Xác nhận sửa"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </ScrollView>
+</LinearLayout>

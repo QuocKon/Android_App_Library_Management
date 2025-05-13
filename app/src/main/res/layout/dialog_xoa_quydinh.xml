@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xác nhận xóa"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#EF2D2D"/>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Bạn có chắc chắn muốn xóa  quy định này?"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textSize="14dp"
+            android:textColor="#050505"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancelXoaQD"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="Thoát"
+                android:textSize="12dp"
+                android:textColor="#00B0FF"
+                app:strokeWidth="2dp"
+                app:strokeColor="#00B0FF"
+                android:backgroundTint="@color/white"
+                android:layout_marginEnd="10dp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnXacNhanXoaQD"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:text="Xoá quy định"
+                android:textSize="12dp"
+                android:textColor="#094929"
+                app:strokeWidth="2dp"
+                app:strokeColor="#00B0FF"
+                android:backgroundTint="#91EF87"
+                android:layout_marginEnd="10dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

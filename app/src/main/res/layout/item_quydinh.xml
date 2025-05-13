@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="#EAEAE1"
+    app:cardCornerRadius="40dp"
+    app:cardElevation="8dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgQuyDinh"
+                android:layout_width="60dp"
+                android:layout_gravity="center"
+                android:layout_height="60dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/bogoc_anhquydinh"
+                android:src="@drawable/decor2" />
+?
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QUY ĐỊNH SỐ "
+                    android:textColor="#050505"
+                    android:textSize="23dp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/txtSTTQuyDinh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" 1"
+                    android:textColor="#050505"
+                    android:textSize="27dp"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtNoiDungQuyDinh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="right"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgSuaQuyDinh"
+                    android:layout_width="40dp"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/baseline_edit_square_24"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgXoaQuyDinh"
+                    android:layout_width="40dp"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/icbin_tacgia"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>
