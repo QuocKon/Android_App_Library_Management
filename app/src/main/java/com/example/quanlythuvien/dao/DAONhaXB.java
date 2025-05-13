@@ -5,7 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.quanlythuvien.adapter.AdapterNhaXB.NhaXB;
+import com.example.quanlythuvien.model.NhaXB;
 import com.example.quanlythuvien.databases.DB;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.example.quanlythuvien.adapter.AdapterNhaXB;
+package com.example.quanlythuvien.model;
 
 public class NhaXB {
     private int manxb;

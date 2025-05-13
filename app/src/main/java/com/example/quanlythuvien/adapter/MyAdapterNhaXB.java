@@ -1,4 +1,4 @@
-package com.example.quanlythuvien.adapter.AdapterNhaXB;
+package com.example.quanlythuvien.adapter;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -26,6 +26,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.quanlythuvien.R;
 import com.example.quanlythuvien.dao.DAONhaXB;
 import com.example.quanlythuvien.fragment.QuanLyNXBFragment;
+import com.example.quanlythuvien.model.NhaXB;
 
 import java.util.ArrayList;
 

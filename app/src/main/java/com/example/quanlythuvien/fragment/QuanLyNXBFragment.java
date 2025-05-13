@@ -23,8 +23,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.quanlythuvien.R;
-import com.example.quanlythuvien.adapter.AdapterNhaXB.MyAdapterNhaXB;
-import com.example.quanlythuvien.adapter.AdapterNhaXB.NhaXB;
+import com.example.quanlythuvien.adapter.MyAdapterNhaXB;
+import com.example.quanlythuvien.model.NhaXB;
 import com.example.quanlythuvien.dao.DAONhaXB;
 
 import java.util.ArrayList;
