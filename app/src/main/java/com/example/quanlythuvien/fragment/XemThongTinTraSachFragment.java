@@ -7,6 +7,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -27,19 +28,20 @@ public class XemThongTinTraSachFragment extends Fragment {
     ArrayList<MuonSach> listmuon;
     DAOMuonSach daoMuonSach;
     MyAdapterTTMuonSach myadapter;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_xem_thong_tin_tra_sach, container, false);
         anhXa(v);
         listmuon = new ArrayList<>();
         listmuon = daoMuonSach.getTatCaSachMuon();
-        myadapter = new MyAdapterTTMuonSach((Activity) v.getContext(),R.layout.item_xem_tra_sach,listmuon);
+        myadapter = new MyAdapterTTMuonSach((Activity) v.getContext(), R.layout.item_xem_tra_sach, listmuon);
         listView.setAdapter(myadapter);
+
         txttimkiem.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) { }
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -47,17 +49,25 @@ public class XemThongTinTraSachFragment extends Fragment {
             }
 
             @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
+            public void afterTextChanged(Editable editable) { }
         });
+
+
         return v;
     }
-    private void filterListView(String searchText){
+
+    private void updateDatabase() {
+
+        listmuon.clear();
+        listmuon.addAll(daoMuonSach.getTatCaSachMuon());
+        myadapter.notifyDataSetChanged();
+    }
+
+    private void filterListView(String searchText) {
         ArrayList<MuonSach> fillSach = new ArrayList<>();
         int ma = daoQuanLy.getMaQuanLy(searchText);
-        for(MuonSach muonsach: daoMuonSach.getTatCaSachMuon()){
-            if(ma == muonsach.getMaquanly()){
+        for (MuonSach muonsach : daoMuonSach.getTatCaSachMuon()) {
+            if (ma == muonsach.getMaquanly()) {
                 fillSach.add(muonsach);
             }
         }
@@ -65,7 +75,7 @@ public class XemThongTinTraSachFragment extends Fragment {
     }
 
     private void anhXa(View v) {
-        listView =  v.findViewById(R.id.listviewtrasach);
+        listView = v.findViewById(R.id.listviewtrasach);
         txttimkiem = v.findViewById(R.id.txttimkiemtrasach);
         daoMuonSach = new DAOMuonSach(v.getContext());
         daoQuanLy = new DAOQuanLy(v.getContext());

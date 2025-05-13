@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
         replaceFragment(new HomeFragment());
-        setTitle("Z-Library");
+        setTitle("PTIT-Library");
         navigationView.getMenu().findItem(R.id.nav_Home).setChecked(true);
 
         checkBatteryLevel();
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if(id==R.id.nav_Home){
             if(currentFragment!=FRAGMENT_HOME){
                 replaceFragment(new HomeFragment());
-                setTitle("Z-Library");
+                setTitle("PTIT-Library");
                 currentFragment = FRAGMENT_HOME;
             }
         }
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         }else if(id == R.id.nav_XemThongTinTraSach){
             if(currentFragment!=FRAGMENT_XEMTHONGTIN){
-                if(ma == daoQuanLy.getMaQuanLy("Huy")){
+                if(ma == daoQuanLy.getMaQuanLy("tuan")){
                     replaceFragment(new XemThongTinTraSachFragment());
                     setTitle("Xem mã trả sách");
                     currentFragment = FRAGMENT_XEMTHONGTIN;

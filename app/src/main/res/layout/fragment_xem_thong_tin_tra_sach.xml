@@ -25,6 +25,7 @@
                 android:hint="Nhập tên đăng nhập"
                 android:padding="10dp" />
 
+
         </LinearLayout>
 
         <LinearLayout
