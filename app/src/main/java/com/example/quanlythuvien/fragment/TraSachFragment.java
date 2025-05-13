@@ -42,57 +42,63 @@ public class TraSachFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_quan_tra_sach, container, false);
+        anhXa(v);
+
+        // Nhận Bundle truyền từ fragment trước
         Bundle bundlenhan = getArguments();
         int manhan = bundlenhan.getInt("mamuon");
-        anhXa(v);
-        int slmuon = bundlenhan.getInt("soluongmuon",0);
+        int slmuon = bundlenhan.getInt("soluongmuon", 0);
         String tensach = bundlenhan.getString("tensach");
-        txtthongtin.setText("Bạn đang mượn "+slmuon+" quyển sách "+tensach);
-        myIntent = getActivity().getIntent();
+        String ngaymuon = bundlenhan.getString("ngaymuon");
 
+        // Điền thông tin mã mượn vào EditText
+        edtnhapma.setText(String.valueOf(manhan));
+        edtnhapma.setEnabled(false); // Không cho sửa
+
+        // Ghi chú thông tin người dùng đang mượn sách
+        txtthongtin.setText("Bạn đang mượn " + slmuon + " quyển sách \"" + tensach + "\"");
+
+        // Lấy tên tài khoản đăng nhập
+        myIntent = getActivity().getIntent();
         if (myIntent != null && myIntent.getExtras() != null) {
-            data = (myIntent.getStringExtra("tenTaiKhoan"));
+            data = myIntent.getStringExtra("tenTaiKhoan");
         }
-        ma = daoQuanLy.getMaQuanLy(data);
+        ma = daoQuanLy.getMaQuanLy(data); // Lấy mã quản lý
+
+        // Xử lý khi bấm nút xác nhận trả sách
         btnxacnhantra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String matrasach = edtnhapma.getText().toString().trim();
                 String sltra = edtsl.getText().toString().trim();
-                if (matrasach.isEmpty()) {
-                    showDialogNotiFail("Vui lòng nhập mã để trả sách");
-                }
-                else if (sltra.isEmpty()) {
-                    showDialogNotiFail("Vui lòng nhập mã để trả sách");
-                }
-                else {
-                    int manhantra = Integer.parseInt(matrasach);
-                    int sluongtra = Integer.parseInt(sltra);
-                    if(sluongtra > slmuon){
-                        showDialogNotiFail("Số lượng trả không hợp lệ");
-                    }
-                    else{
-                        if (manhantra == manhan) {
-                            if(daoMuonSach.update_trasach(ma,bundlenhan.getString("tensach"), bundlenhan.getString("ngaymuon"),sluongtra,formattedDate)>0){
-                                showDialogNotiSuccess("Trả sách thành công");
-                                HomeFragment fragment = new HomeFragment();
-                                getActivity().getSupportFragmentManager().beginTransaction()
-                                        .replace(R.id.content_frame, fragment)
-                                        .addToBackStack(null)
-                                        .commit();
-                            }
-                            else {
-                                showDialogNotiSuccess("Trả sách thất bại. Vui lòng kiểm tra lại thông tin");
-                            }
-                        }
-                        else{
-                            showDialogNotiFail("Bạn nhập sai mã trả sách");
-                        }
-                    }
 
+                if (sltra.isEmpty()) {
+                    showDialogNotiFail("Vui lòng nhập số lượng sách muốn trả");
+                    return;
+                }
+
+                int sluongtra = Integer.parseInt(sltra);
+                if (sluongtra > slmuon) {
+                    showDialogNotiFail("Số lượng trả không hợp lệ");
+                    return;
+                }
+
+                // Thực hiện trả sách
+                int kq = daoMuonSach.update_trasach(ma, tensach, ngaymuon, sluongtra, formattedDate);
+                if (kq > 0) {
+                    showDialogNotiSuccess("Trả sách thành công");
+
+                    // Chuyển về trang chủ sau khi trả sách
+                    HomeFragment fragment = new HomeFragment();
+                    getActivity().getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content_frame, fragment)
+                            .addToBackStack(null)
+                            .commit();
+                } else {
+                    showDialogNotiFail("Trả sách thất bại. Vui lòng kiểm tra lại thông tin");
                 }
             }
         });
+
         return v;
     }
 
