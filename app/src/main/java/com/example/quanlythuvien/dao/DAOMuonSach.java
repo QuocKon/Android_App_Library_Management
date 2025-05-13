@@ -79,7 +79,7 @@ public class DAOMuonSach {
 
     public int getsosachdamuon(int maquanly){
         int kq = 0;
-        String sql = "select sum(SoLuong) from MuonSach where MaQuanLy=? and TinhTrang=? group by MaQuanLy";
+        String sql = "select sum(SoLuong) from MuonSach where MaQuanLy=? and TinhTrang=?";
         Cursor c = database.rawQuery(sql, new String[]{maquanly+"","Đã trả"});
         if(c!= null && c.moveToFirst()){
             kq = c.getInt(0);
